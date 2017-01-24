@@ -1,13 +1,5 @@
 class ProjectsController < ApplicationController
 
-	def index
-		@projects = Project.all
-	end
-
-	def new
-		@project = Project.new	
-	end
-
 	def create
 		@project = Project.new(project_params)
 		if @project.save
@@ -19,8 +11,24 @@ class ProjectsController < ApplicationController
 		end  
 	end
 
+	def destroy
+		@project = Project.find(params[:id])
+		@project.destroy
+
+		flash[:notice] = "Project has been deleted."
+		redirect_to projects_path
+	end
+
+	def index
+		@projects = Project.all
+	end
+
 	def edit
 		@project = Project.find(params[:id])
+	end
+
+	def new
+		@project = Project.new	
 	end
 
 	def show
