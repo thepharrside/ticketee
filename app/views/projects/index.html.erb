@@ -1,9 +1,14 @@
 <% @title = "Projects - Ticketee" %>
-<h1>Projects</h1>
+<div class="page-header">
+	<h1>Projects</h1>
 
-<%= link_to "New Project", new_project_path %>
+	<ul class="actions">
+	  <li> <%= link_to fa_icon("plus") + " New Project", new_project_path,
+	  class: "btn btn-success" %></li>
+	</ul>
+</div>
 
-<div id="projects">
+<div id="projects" class="container">
 	<% @projects.each do |project| %>
 		<h2><%= link_to project.name, project %></h2>
 		<p><%= project.description %></p>
