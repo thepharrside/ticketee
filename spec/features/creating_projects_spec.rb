@@ -11,5 +11,16 @@ RSpec.feature "Users can create new projects" do
     click_button "Create Project"
 
     expect(page).to have_content "Project has been successfully created."
+    project = Project.find_by(name: "Sublime Text 3")
+	
+	expect(page.current_url).to eq project_url(project)
+	expect(page).to have_title 'Projects - Ticketee'
+	
+
   end
+
+
 end
+
+
+
