@@ -42,3 +42,52 @@ ul.actions {
 	max-width: 45%;
 	text-align: right;
 }
+
+a.new {
+	@extend .btn;
+	@extend .btn-success;
+
+	&:before {
+	  font-family: "FontAwesome";
+	  @extend .fa-plus;
+	  padding-right: 0.5em;
+	}
+}
+
+a.edit {
+	@extend .btn;
+	@extend .btn-primary;
+
+	&:before {
+	  font-family: "FontAwesome";
+	  @extend .fa-pencil;
+	  padding-right: .5em;
+	}
+}
+
+a.delete {
+	@extend .btn;
+	@extend .btn-danger;
+
+	&:before {
+	font-family: "FontAwesome";
+	@extend .fa-trash;
+	padding-right: .5em;
+	}
+}
+
+header {
+	@extend .page-header;
+	position: relative;
+	padding-bottom: 0px;
+
+	&:first-child {
+	margin-top: 20px;
+	}
+}
+
+#projects h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0px 0px;
+}
