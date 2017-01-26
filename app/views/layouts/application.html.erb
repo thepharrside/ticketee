@@ -35,6 +35,11 @@
               <%= link_to "Sign in", new_user_session_path %>
               </li>
             <% end %>
+            <% admins_only do %>
+              <li>
+                <%= link_to "Admin", admin_root_path %>
+              </li>
+            <% end %>
           </ul>
           <% if user_signed_in? %>
             <div class="navbar-right">
