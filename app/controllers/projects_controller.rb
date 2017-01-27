@@ -42,6 +42,6 @@ class ProjectsController < ApplicationController
 		end
 
 
-	end
+end
 
 
