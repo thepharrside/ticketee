@@ -18,7 +18,7 @@ def new
 end
 
 def show
-
+	authorize @ticket, :show?
 end
 
 def create
