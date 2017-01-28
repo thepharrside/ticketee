@@ -7,13 +7,11 @@ class ProjectPolicy < ApplicationPolicy
   	
   	scope.joins(:roles).where(roles: {user_id: user})
     end
-  
- 
-  
-
 
 	  def show?
 	  	user.try(:admin?) || record.roles.exists?(user_id: user)
 	  end
+
+	  
   end
 end
