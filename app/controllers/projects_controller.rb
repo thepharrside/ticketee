@@ -8,8 +8,8 @@ class ProjectsController < ApplicationController
 	end
 	
 	def index
-		@projects = Project.all
-	end	
+		@projects = policy_scope(Project)
+	end
 
 	
 	def show
