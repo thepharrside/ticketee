@@ -34,8 +34,6 @@ def create
 	end
 end
 
-def show
-end
 
 def update
 	if @ticket.update(ticket_params)

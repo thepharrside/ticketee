@@ -7,7 +7,7 @@ RSpec.describe TicketPolicy do
 
     let(:user) { FactoryGirl.create(:user) }
     let(:project) { FactoryGirl.create(:project) }
-  let(:author) { FactoryGirl.create(:user, :admin) }
+    let(:author) { FactoryGirl.create(:user, :admin) }
     let(:ticket) { FactoryGirl.create(:ticket, project: project, author: author) }
 
     context "for anonymous users" do
