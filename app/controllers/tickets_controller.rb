@@ -15,6 +15,7 @@ end
 
 def new
 	@ticket = @project.tickets.build
+	authorize @ticket, :create?
 end
 
 def show
@@ -24,6 +25,7 @@ end
 def create
 	@ticket = @project.tickets.build(ticket_params)
 	@ticket.author = current_user
+	authorize @ticket, :create?
 	
 	if @ticket.save
 		flash[:notice] = "Ticket has been created."
