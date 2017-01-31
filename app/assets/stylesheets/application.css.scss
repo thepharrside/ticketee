@@ -4,7 +4,7 @@
 @import "projects";
 @import "tickets";
 @import "admin/application";
-
+@import "admin/users.scss";
 
 .alert-notice {
 	@extend .alert-success;
@@ -94,3 +94,4 @@ header {
 	font-weight: bold;
 	margin: 20px 0px 0px;
 }
+
