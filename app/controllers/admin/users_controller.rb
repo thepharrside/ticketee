@@ -5,6 +5,8 @@ class Admin::UsersController < Admin::ApplicationController
   
   def create
   	@user = User.new(user_params)
+    build_roles_for(@user)
+    
 
   	if @user.save
   		flash[:notice] = "User has been created."
